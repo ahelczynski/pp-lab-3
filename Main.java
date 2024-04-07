@@ -1,20 +1,14 @@
-import geometry.Circle;
-import geometry.Point;
-import geometry.ColoredCircle;
+
+import geometry.Rectangle;
 
 public class Main {
 
     public static void main(String[] args) {
-        Circle[] circles = new Circle[3];
-        circles[0] = new Circle(new Point(1.0, 2.0), 5.0);
-        circles[1] = new ColoredCircle(new Point(3.0, 4.0), 6.0, "Czerwony");
-        circles[2] = new Circle(new Point(5.0, 6.0), 7.0);
-        for (Circle circle : circles) {
-            System.out.println("Pole powierzchni koła: " + circle.getArea());
-            if (circle instanceof ColoredCircle) {
-                ColoredCircle coloredCircle = (ColoredCircle) circle;
-                System.out.println("Kolor koła: " + coloredCircle.getColor());
-            }
-        }
+        Rectangle rectangle = new Rectangle(5.0, 3.0);
+        System.out.println("Prostokąt: " + rectangle);
+        System.out.println("Długość prostokąta: " + rectangle.getLength());
+        System.out.println("Szerokość prostokąta: " + rectangle.getWidth());
+        System.out.println("Obwód prostokąta: " + rectangle.getPerimeter());
+        System.out.println("Pole powierzchni prostokąta: " + rectangle.getArea());
     }
 }
